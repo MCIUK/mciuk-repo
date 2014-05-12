@@ -625,9 +625,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureWebRole.cs" />
-    <Compile Include="Designer\Designer\FormWidget1Designer.cs" />
-    <Compile Include="Designer\FormWidget1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="widget\Designer\MyWidget1Designer.cs" />
+    <Compile Include="widget\MyWidget1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Sitefinity\WebsiteTemplates\MyTheme1\App_Themes\MyTheme1\Global\cssLoadOrder.xml" />
@@ -681,10 +681,6 @@
     <Content Include="ClientBin\Telerik.Sitefinity.Analytics.xap" />
     <Content Include="ClientBin\Telerik.Sitefinity.Silverlight.xap" />
     <Content Include="Default.aspx" />
-    <Content Include="Designer\Designer\FormWidget1Designer.ascx" />
-    <Content Include="Designer\Designer\FormWidget1Designer.js" />
-    <Content Include="Designer\FormWidget1.ascx" />
-    <Content Include="Designer\FormWidget1.js" />
     <Content Include="Silverlight.js" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Public\Services\Thunder\ThunderService.svc" />
@@ -798,6 +794,9 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="widget\Designer\MyWidget1Designer.ascx" />
+    <Content Include="widget\Designer\MyWidget1Designer.js" />
+    <Content Include="widget\MyWidget1.ascx" />
     <Content Include="wlwmanifest.xml" />
     <Content Include="Mvc\Controllers\readme.txt" />
     <Content Include="Mvc\Models\readme.txt" />
@@ -814,6 +813,7 @@
     <Folder Include="App_Data\Sitefinity\WebsiteTemplates\MyTheme1\App_Themes\MyTheme1\Images\Images\" />
     <Folder Include="App_Data\Sitefinity\WebsiteTemplates\testTheme\App_Themes\testTheme\Global\Global\" />
     <Folder Include="App_Data\Sitefinity\WebsiteTemplates\testTheme\App_Themes\testTheme\Images\Images\" />
+    <Folder Include="formWidget\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\GeoLocation\GeoLiteCity.dat" />
