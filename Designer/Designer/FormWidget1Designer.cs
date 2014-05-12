@@ -8,12 +8,12 @@ using Telerik.Sitefinity.Forms.Model;
 using Telerik.Sitefinity.Modules.Forms;
 using Telerik.Sitefinity.Modules.Forms.Web.UI.Fields;
 
-namespace SitefinityWebApp.Designer
+namespace SitefinityWebApp.Designer.Designer
 {
     /// <summary>
-    /// Represents a designer for the <typeparamref name="SitefinityWebApp.testFormWidget1"/> widget
+    /// Represents a designer for the <typeparamref name="SitefinityWebApp.Designer.FormWidget1"/> widget
     /// </summary>
-    public class testFormWidget1Designer : ControlDesignerBase
+    public class FormWidget1Designer : ControlDesignerBase
     {
         #region Properties
         /// <summary>
@@ -35,7 +35,7 @@ namespace SitefinityWebApp.Designer
             get
             {
                 if (string.IsNullOrEmpty(base.LayoutTemplatePath))
-                    return testFormWidget1Designer.layoutTemplatePath;
+                    return FormWidget1Designer.layoutTemplatePath;
                 return base.LayoutTemplatePath;
             }
             set
@@ -157,14 +157,14 @@ namespace SitefinityWebApp.Designer
         public override System.Collections.Generic.IEnumerable<System.Web.UI.ScriptReference> GetScriptReferences()
         {
             var scripts = new List<ScriptReference>(base.GetScriptReferences());
-            scripts.Add(new ScriptReference(testFormWidget1Designer.scriptReference));
+            scripts.Add(new ScriptReference(FormWidget1Designer.scriptReference));
             return scripts;
         }
         #endregion
 
         #region Private members & constants
-        public static readonly string layoutTemplatePath = "~/Designer/testFormWidget1Designer.ascx";
-        public const string scriptReference = "~/Designer/testFormWidget1Designer.js";
+        public static readonly string layoutTemplatePath = "~/Designer/Designer/FormWidget1Designer.ascx";
+        public const string scriptReference = "~/Designer/Designer/FormWidget1Designer.js";
         #endregion
     }
 }

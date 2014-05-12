@@ -14,7 +14,7 @@ using Telerik.Sitefinity.Web.UI.ControlDesign;
 using Telerik.Sitefinity.Web.UI.Fields;
 using Telerik.Sitefinity.Web.UI.Fields.Enums;
 
-namespace SitefinityWebApp
+namespace SitefinityWebApp.Designer
 {
     /// <summary>
     /// Class used to create custom control for Form Builder
@@ -27,9 +27,9 @@ namespace SitefinityWebApp
     ///        .LoadOrAddSection(SectionName) // "TwoColumns" is Sitefinity's default
     ///            .SetTitle(SectionTitle) // When creating a new section
     ///            .SetDescription(SectionDescription) // When creating a new section
-    ///            .LoadOrAddWidget<testFormWidget1>("testFormWidget1")
-    ///                .SetTitle("testFormWidget1")
-    ///                .SetDescription("testFormWidget1")
+    ///            .LoadOrAddWidget<FormWidget1>("FormWidget1")
+    ///                .SetTitle("FormWidget1")
+    ///                .SetDescription("FormWidget1")
     ///                .LocalizeUsing<ModuleResourceClass>() // Optional
     ///                .SetCssClass(WidgetCssClass) // You can use a css class to add an icon (this is optional)
     ///            .Done()
@@ -38,16 +38,16 @@ namespace SitefinityWebApp
     /// </remarks>
     /// <see cref="http://www.sitefinity.com/documentation/gettingstarted/creating-custom-form-field-controls"/>
     [DatabaseMapping(UserFriendlyDataType.ShortText)]
-    [PropertyEditorTitle("testFormWidget1 Properties"), Telerik.Sitefinity.Web.UI.ControlDesign.ControlDesigner(typeof(SitefinityWebApp.Designer.testFormWidget1Designer))]
-    public class testFormWidget1 : FieldControl, IFormFieldControl
+    [PropertyEditorTitle("FormWidget1 Properties"), Telerik.Sitefinity.Web.UI.ControlDesign.ControlDesigner(typeof(SitefinityWebApp.Designer.Designer.FormWidget1Designer))]
+    public class FormWidget1 : FieldControl, IFormFieldControl
     {
         #region Constructor
         /// <summary>
-        /// Initializes a new instance of the testFormWidget1 class.
+        /// Initializes a new instance of the FormWidget1 class.
         /// </summary>
-        public testFormWidget1()
+        public FormWidget1()
         {
-            this.Title = "testFormWidget1";
+            this.Title = "FormWidget1";
         }
         #endregion
 
@@ -129,7 +129,7 @@ namespace SitefinityWebApp
             get
             {
                 if (string.IsNullOrEmpty(base.LayoutTemplatePath))
-                    return testFormWidget1.layoutTemplatePath;
+                    return FormWidget1.layoutTemplatePath;
                 return base.LayoutTemplatePath;
             }
             set
@@ -269,7 +269,7 @@ namespace SitefinityWebApp
         /// <returns>List of all scripts used by control</returns>
         public override IEnumerable<ScriptDescriptor> GetScriptDescriptors()
         {
-            var descriptor = new ScriptControlDescriptor(typeof(testFormWidget1).FullName, this.ClientID);
+            var descriptor = new ScriptControlDescriptor(typeof(FormWidget1).FullName, this.ClientID);
             descriptor.AddElementProperty("textbox", this.TextBox1.ClientID);
             descriptor.AddProperty("dataFieldName", this.MetaField.FieldName); //the field name of the corresponding widget
             return new[] { descriptor };
@@ -283,7 +283,7 @@ namespace SitefinityWebApp
         {
             var scripts = new List<ScriptReference>(base.GetScriptReferences())
             {
-                new ScriptReference(testFormWidget1.scriptReference),
+                new ScriptReference(FormWidget1.scriptReference),
                 new ScriptReference("Telerik.Sitefinity.Web.UI.Fields.Scripts.FieldDisplayMode.js", "Telerik.Sitefinity"),
             };
             return scripts;
@@ -292,8 +292,8 @@ namespace SitefinityWebApp
 
         #region Private fields and constants
         private IMetaField metaField = null;
-        public static readonly string layoutTemplatePath = "~/testFormWidget1.ascx";
-        public const string scriptReference = "~/testFormWidget1.js";
+        public static readonly string layoutTemplatePath = "~/Designer/FormWidget1.ascx";
+        public const string scriptReference = "~/Designer/FormWidget1.js";
         #endregion
     }
 }

@@ -1,12 +1,12 @@
-﻿Type.registerNamespace("SitefinityWebApp");
+﻿Type.registerNamespace("SitefinityWebApp.Designer");
 
-SitefinityWebApp.testFormWidget1 = function (element) {
+SitefinityWebApp.Designer.FormWidget1 = function (element) {
     this._textbox = null;
     this._dataFieldName = null;
-    SitefinityWebApp.testFormWidget1.initializeBase(this, [element]);
+    SitefinityWebApp.Designer.FormWidget1.initializeBase(this, [element]);
 }
 
-SitefinityWebApp.testFormWidget1.prototype = {
+SitefinityWebApp.Designer.FormWidget1.prototype = {
     /* --------------------------------- set up and tear down ---------------------------- */
 
     /* --------------------------------- public methods ---------------------------------- */
@@ -44,4 +44,4 @@ SitefinityWebApp.testFormWidget1.prototype = {
     }
 }
 
-SitefinityWebApp.testFormWidget1.registerClass('SitefinityWebApp.testFormWidget1', Telerik.Sitefinity.Web.UI.Fields.FieldControl);
+SitefinityWebApp.Designer.FormWidget1.registerClass('SitefinityWebApp.Designer.FormWidget1', Telerik.Sitefinity.Web.UI.Fields.FieldControl);

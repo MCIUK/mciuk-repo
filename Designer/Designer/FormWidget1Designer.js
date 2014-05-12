@@ -1,6 +1,6 @@
-Type.registerNamespace("SitefinityWebApp.Designer");
+Type.registerNamespace("SitefinityWebApp.Designer.Designer");
 
-SitefinityWebApp.Designer.testFormWidget1Designer = function (element) {
+SitefinityWebApp.Designer.Designer.FormWidget1Designer = function (element) {
     /* Initialize Title fields */
     this._title = null;
     
@@ -14,18 +14,18 @@ SitefinityWebApp.Designer.testFormWidget1Designer = function (element) {
     this._metaFieldNameTextBox = null;
 
     /* Calls the base constructor */
-    SitefinityWebApp.Designer.testFormWidget1Designer.initializeBase(this, [element]);
+    SitefinityWebApp.Designer.Designer.FormWidget1Designer.initializeBase(this, [element]);
 }
 
-SitefinityWebApp.Designer.testFormWidget1Designer.prototype = {
+SitefinityWebApp.Designer.Designer.FormWidget1Designer.prototype = {
     /* --------------------------------- set up and tear down --------------------------------- */
     initialize: function () {
         /* Here you can attach to events or do other initialization */
-        SitefinityWebApp.Designer.testFormWidget1Designer.callBaseMethod(this, 'initialize');
+        SitefinityWebApp.Designer.Designer.FormWidget1Designer.callBaseMethod(this, 'initialize');
     },
     dispose: function () {
         /* this is the place to unbind/dispose the event handlers created in the initialize method */
-        SitefinityWebApp.Designer.testFormWidget1Designer.callBaseMethod(this, 'dispose');
+        SitefinityWebApp.Designer.Designer.FormWidget1Designer.callBaseMethod(this, 'dispose');
     },
 
     /* --------------------------------- public methods ---------------------------------- */
@@ -87,4 +87,4 @@ SitefinityWebApp.Designer.testFormWidget1Designer.prototype = {
     set_metaFieldNameTextBox: function (value) { this._metaFieldNameTextBox = value; }
 }
 
-SitefinityWebApp.Designer.testFormWidget1Designer.registerClass('SitefinityWebApp.Designer.testFormWidget1Designer', Telerik.Sitefinity.Web.UI.ControlDesign.ControlDesignerBase);
+SitefinityWebApp.Designer.Designer.FormWidget1Designer.registerClass('SitefinityWebApp.Designer.Designer.FormWidget1Designer', Telerik.Sitefinity.Web.UI.ControlDesign.ControlDesignerBase);

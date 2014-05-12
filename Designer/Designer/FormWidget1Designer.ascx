@@ -10,23 +10,16 @@
 <div id="designerLayoutRoot" class="sfContentViews sfSingleContentView" style="max-height: 400px; overflow: auto; ">
 <ol>        
     <li class="sfFormCtrl">
-    <asp:Label runat="server" AssociatedControlID="Title" CssClass="sfTxtLbl">Title</asp:Label>
-    <asp:TextBox ID="Title" runat="server" CssClass="sfTxt" />
-    <div class="sfExample">The widget's title</div>
+    <asp:Label runat="server" AssociatedControlID="txRubbish" CssClass="sfTxtLbl">Title</asp:Label>
+        <telerik:RadTextBox ID="txRubbish" runat="server"></telerik:RadTextBox>
+    <div class="sfExample">Type some nonsense!</div>
     </li>
     
     <li class="sfFormCtrl">
     <asp:Label runat="server" AssociatedControlID="Description" CssClass="sfTxtLbl">Description</asp:Label>
     <asp:TextBox ID="Description" runat="server" CssClass="sfTxt" />
     <div class="sfExample">The widget's description</div>
-    </li>
-    
-    <li class="sfFormCtrl">
-    <asp:Label runat="server" AssociatedControlID="Example" CssClass="sfTxtLbl">Example</asp:Label>
-    <asp:TextBox ID="Example" runat="server" CssClass="sfTxt" />
-    <div class="sfExample">An example of a valid value</div>
-    </li>
-    
+    </li>  
 </ol>
 <sfForms:MetaFieldNameTextBox runat="server" id="metaFieldNameTextBox"></sfForms:MetaFieldNameTextBox>
 </div>
